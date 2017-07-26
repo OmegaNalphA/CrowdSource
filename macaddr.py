@@ -1,7 +1,8 @@
 import pyshark
+
 def NetCap():
     print 'capturing...'
-    livecapture = pyshark.LiveCapture(interface="eth0", output_file='./test.pcapng')
+    livecapture = pyshark.LiveCapture()
     livecapture.sniff(timeout=10)
     print 'end of capture.'
     print livecapture
