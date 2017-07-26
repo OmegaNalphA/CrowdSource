@@ -1,7 +1,11 @@
 import pyshark
 
-print "lol"
+def NetCap():
+    print 'capturing...'
+    livecapture = pyshark.LiveCapture()
+    livecapture.sniff(timeout=10)
+    print 'end of capture.'
+    print livecapture
 
-# from uuid import getnode as get_mac
-# mac_addr = get_mac()
-# print hex(mac_addr)
+if __name__ == "__main__":
+    NetCap()
